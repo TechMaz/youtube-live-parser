@@ -1,6 +1,6 @@
 {
   "name": "Youtube Live Video Chat Parser",
   "description": "Scrapes chat from a live Youtube video, stores it and updates page live.",
-  "repository": "",
+  "repository": "https://github.com/TechMaz/youtube-live-parser",
   "addons": []
 }
