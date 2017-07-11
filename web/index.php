@@ -1,6 +1,7 @@
 <?php
 
 require('../vendor/autoload.php');
+include 'functions.php';
 
 $app = new Silex\Application();
 $app['debug'] = true;
@@ -34,7 +35,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  $content = "Hello World";
+  $content = test();
   return $app['twig']->render('index.twig', array('content' => $content));
 });
 
