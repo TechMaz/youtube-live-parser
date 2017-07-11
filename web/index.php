@@ -35,7 +35,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  $content = test();
+  $content = getChats('MFH0i0KcE_o');
   return $app['twig']->render('index.twig', array('content' => $content));
 });
 
