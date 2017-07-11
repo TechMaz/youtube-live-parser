@@ -1,5 +1,5 @@
 <?php
 
-private function test(){
+function test(){
 	return "Hello World";
 }
