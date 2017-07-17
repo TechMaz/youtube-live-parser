@@ -41,7 +41,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/video/{vid}', function($vid) use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('video.twig', array('video_id' => $vid));
+  return $app['twig']->render('video.twig', array('vid' => $vid));
 });
 
 
