@@ -35,9 +35,15 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  $content = getChats('MFH0i0KcE_o');
+  $content = 'empty';
   return $app['twig']->render('index.twig', array('content' => $content));
 });
+
+$app->get('/video/{vid}', function($vid) use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('video.twig', array('video_id' => $vid));
+});
+
 
 $app->get('/db/', function() use($app) {
   $st = $app['pdo']->prepare('SELECT name FROM test_table');
