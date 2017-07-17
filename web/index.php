@@ -31,7 +31,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
-// Our web handlers
+//Web handlers
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');

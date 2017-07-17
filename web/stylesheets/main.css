@@ -1,0 +1,11 @@
+.yt-video-container{
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ width: 65%;
+ height: 100%;
+ padding: 30px;
+ padding-top: 15%;
+}
+.yt-video-container > .yt-live-video{
+}
