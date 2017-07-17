@@ -1,3 +1,9 @@
+body{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
 .yt-video-container{
  position: absolute;
  left: 0px;
@@ -8,4 +14,17 @@
  padding-top: 15%;
 }
 .yt-video-container > .yt-live-video{
+}
+
+.yt-chat-container{
+ position: absolute;
+ left: 65%;
+ right: 0px;
+ top: 0px;
+ width: 35%;
+ height: 100%;
+ padding: 30px;
+ padding-top: 15%;
+}
+.yt-chat-container > .yt-chatbox{
 }
