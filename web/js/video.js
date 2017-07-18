@@ -17,8 +17,10 @@ setTimeout(function(){
   		//console.log(responseData);
   		$('#chatbox').html(responseData);
 	});
-	$("#yt-chat-container").scrollTop($('#yt-chat-container').prop("scrollHeight"));
-	$("#chatbox").scrollTop($("#chatbox").prop("scrollHeight"));
+	setTimeout(function(){
+		$('#yt-chat-container').scrollTop($('#yt-chat-container')[0].scrollHeight);
+		$('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+	}, 500);
 
 }, 2000);
 
