@@ -47,7 +47,9 @@ $app->get('/video/{vid}', function($vid) use($app) {
 $app->get('/scrape/{id}', function($id) use($app) {
   $url = "https://youtube-live-chat-scraper.herokuapp.com/scrape/{$id}";
   $content = file_get_contents($url);
-  return new JsonResponse(array('content' => $content));
+  $response = new \Symfony\Component\HttpFoundation\JsonResponse();
+  $response->setContent(json_encode(array('content' => $content)));
+  return $repsonse;
 });
 
 $app->get('/db/', function() use($app) {
