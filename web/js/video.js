@@ -1,6 +1,6 @@
 var chatbox = new Vue({
   el: '#chatbox',
   data: {
-    chats: 'Hello Vue!'
+    chats_arr: 'Hello Vue!'
   }
 })
