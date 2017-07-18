@@ -8,9 +8,7 @@
 
 	<div class="yt-chat-container">
 		<div class="yt-chatbox">
-			<div id="chatbox">
-				{{chats_arr}}
-			</div>
+			{% include 'chats.html' %}
 			{% for chat in chats %}
 				<tr>
 					<td>
