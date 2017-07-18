@@ -5,7 +5,7 @@ function test(){
 }
 
 function getChats($id){
-	$url = "https://www.youtube.com/live_chat?v={$id}";
-	$html = file_get_contents($url);
-	return $html;
+	$url = "https://youtube-live-chat-scraper.herokuapp.com/scrape/{$id}";
+	$json = file_get_contents($url);
+	return $json;
 }

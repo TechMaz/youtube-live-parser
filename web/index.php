@@ -41,9 +41,9 @@ $app->get('/', function() use($app) {
 
 $app->get('/video/{vid}', function($vid) use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('video.twig', array('vid' => $vid));
+  $chats_array = getChats($vid);
+  return $app['twig']->render('video.twig', array('vid' => $vid, 'chats' => $chats_array));
 });
-
 
 $app->get('/db/', function() use($app) {
   $st = $app['pdo']->prepare('SELECT name FROM test_table');
