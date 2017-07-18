@@ -3,7 +3,7 @@ setTimeout(function(){
 
 	Vue.component('chat-item', {
 	  props: ['message'],
-	  template: '<li>{{ message.text }}</li>'
+	  template: '<tr><td>{{ message.text }}</td></tr>'
 	})
 
 	var chatbox = new Vue({
@@ -17,5 +17,5 @@ setTimeout(function(){
 	  }
 	})
 
-}, 3000);
+}, 2000);
 
