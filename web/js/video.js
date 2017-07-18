@@ -16,11 +16,11 @@ setTimeout(function(){
   		//chatbox.chat_item = responseData;
   		//console.log(responseData);
   		$('#chatbox').html(responseData);
+  		setTimeout(function(){
+			$('#yt-chat-container').scrollTop($('#yt-chat-container')[0].scrollHeight);
+			$('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+		}, 200);
 	});
-	setTimeout(function(){
-		$('#yt-chat-container').scrollTop($('#yt-chat-container')[0].scrollHeight);
-		$('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
-	}, 500);
 
 }, 2000);
 
