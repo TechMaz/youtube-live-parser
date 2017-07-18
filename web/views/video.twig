@@ -8,7 +8,14 @@
 
 	<div class="yt-chat-container">
 		<div class="yt-chatbox">
-			{{ chats }}
+			{% for chat in chats %}
+				<tr>
+					<td>
+						Author: {{ chat.author_name }}
+						Message: {{ chat.message }}
+					<td>
+				</tr>
+			{% endfor %}
 		</div>
 	</div>
 
