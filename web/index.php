@@ -47,7 +47,8 @@ $app->get('/video/{vid}', function($vid) use($app) {
 $app->get('/scrape/{id}', function($id) use($app) {
   $url = "https://youtube-live-chat-scraper.herokuapp.com/scrape/{$id}";
   $content = file_get_contents($url);
-  return $app->json($content, 400);
+  //return $app->json($content, 400);
+  return $app['twig']->render('url.twig', array('content' => $content));
 });
 
 $app->get('/db/', function() use($app) {
