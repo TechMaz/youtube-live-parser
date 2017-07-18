@@ -10,7 +10,7 @@
 		<div id="chatbox" class="yt-chatbox">
 			<chat-item
       			v-for="item in chats_arr"
-      			v-bind:message="item"
+      			v-bind:chat="item"
       			v-bind:key="item.id">
     		</chat-item>
 			<!-- {% for chat in chats %}

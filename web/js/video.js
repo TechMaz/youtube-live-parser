@@ -2,8 +2,8 @@
 setTimeout(function(){ 
 
 	Vue.component('chat-item', {
-	  props: ['message'],
-	  template: '<tr><td>{{ message.text }}</td></tr>'
+	  props: ['chat'],
+	  template: '<tr><td><strong>{{ chat.author_name }}</strong>: {{ chat.message}}</td></tr>'
 	})
 
 	var chatbox = new Vue({
@@ -15,7 +15,7 @@ setTimeout(function(){
 
 	$.get('https://youtube-live-chat.herokuapp.com/scrape/MFH0i0KcE_o').then(function(responseData) {
   		chatbox.chats_arr = responseData;
-  		console.log(responseData);
+  		//console.log(responseData);
 	});
 
 }, 2000);
