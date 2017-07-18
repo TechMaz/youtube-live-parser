@@ -7,8 +7,12 @@
 	</div>
 
 	<div class="yt-chat-container">
-		<div class="yt-chatbox">
-			{% include 'chats.html' %}
+		<div class="yt-chatbox" id="yt-chatbox">
+			<chat-item
+      			v-for="item in chats_arr"
+      			v-bind:message="item"
+      			v-bind:key="item.id">
+    		</chat-item>
 			{% for chat in chats %}
 				<tr>
 					<td>
