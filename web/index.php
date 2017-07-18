@@ -41,7 +41,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/video/{vid}', function($vid) use($app) {
   $app['monolog']->addDebug('logging output.');
-  $chats_array = getChats($vid);
+  $chats_array = parseChats($vid);
   return $app['twig']->render('video.twig', array('vid' => $vid, 'chats' => $chats_array));
 });
 

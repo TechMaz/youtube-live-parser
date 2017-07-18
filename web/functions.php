@@ -6,6 +6,12 @@ function test(){
 
 function getChats($id){
 	$url = "https://youtube-live-chat-scraper.herokuapp.com/scrape/{$id}";
-	$json = file_get_contents($url);
+	$content = file_get_contents($url);
+	return $content;
+}
+
+function parseChats($id){
+	$content = getChats($id);
+	$json = json_decode($content, true);
 	return $json;
 }
