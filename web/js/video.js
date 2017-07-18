@@ -20,11 +20,14 @@ function updateChats(){
 	$.get('https://youtube-live-chat.herokuapp.com/chats/MFH0i0KcE_o').then(function(responseData) {
   		//chatbox.chat_item = responseData;
   		//console.log(responseData);
+  		var prevdata = $('#chatbox').html();
   		$('#chatbox').html(responseData);
-  		setTimeout(function(){
-			$('#yt-chat-container').scrollTop($('#yt-chat-container')[0].scrollHeight);
-			$('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
-		}, 200);
+  		if(prevdata != responseData){
+  			setTimeout(function(){
+				$('#yt-chat-container').scrollTop($('#yt-chat-container')[0].scrollHeight);
+				$('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+			}, 200);
+  		}
 		setTimeout(updateChats,5000);
 	});
 }
