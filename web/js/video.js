@@ -16,8 +16,8 @@ setTimeout(function(){
   		//chatbox.chat_item = responseData;
   		//console.log(responseData);
   		$('#chatbox').html(responseData);
-  		$('#chatbox').scrollTop = $('#chatbox').scrollHeight;
 	});
+	$("#yt-chat-container").animate({ scrollTop: $('#yt-chat-container').prop("scrollHeight")}, 1000);
 
 }, 2000);
 
