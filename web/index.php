@@ -53,7 +53,7 @@ $app->get('/scrape/{id}', function($id) use($app) {
 
 $app->get('/chats/{id}', function($id) use($app) {
   $chats = parseChats($id);
-  return $app['twig']->render('url.twig', array('chats' => $chats));
+  return $app['twig']->render('chats.twig', array('chats' => $chats));
 });
 
 $app->get('/db/', function() use($app) {
