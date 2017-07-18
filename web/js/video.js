@@ -5,7 +5,7 @@ Vue.component('chat-item', {
 })
 
 var chatbox = new Vue({
-  el: '#yt-chatbox',
+  el: '#chatbox',
   data: {
     chats_arr: [
     	{ id: 0, text: 'Vegetables' },
