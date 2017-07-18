@@ -51,6 +51,11 @@ $app->get('/scrape/{id}', function($id) use($app) {
   return $app['twig']->render('url.twig', array('content' => $content));
 });
 
+$app->get('/chats/{id}', function($id) use($app) {
+  $chats = parseChats($id);
+  return $app['twig']->render('url.twig', array('chats' => $chats));
+});
+
 $app->get('/db/', function() use($app) {
   $st = $app['pdo']->prepare('SELECT name FROM test_table');
   $st->execute();

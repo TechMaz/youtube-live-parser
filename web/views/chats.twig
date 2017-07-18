@@ -1,0 +1,7 @@
+{% for chat in chats %}
+	<tr>
+		<td>
+			<strong>{{ chat.author_name | raw }}</strong>: {{ chat.message | raw }}
+		<td>
+	</tr><br>
+{% endfor %}
