@@ -17,7 +17,8 @@ setTimeout(function(){
 }, 500);
 
 function updateChats(){
-	$.get('https://youtube-live-chat.herokuapp.com/chats/MFH0i0KcE_o').then(function(responseData) {
+	var chats_url = 'https://youtube-live-chat.herokuapp.com/chats/' + window.location.pathname.split('/')[2];
+	$.get(chats_url).then(function(responseData) {
   		//chatbox.chat_item = responseData;
   		//console.log(responseData);
   		var prevdata = $('#chatbox').html();
