@@ -46,7 +46,7 @@ $app->get('/video/{vid}', function($vid) use($app) {
 
 $app->get('/url/{url}', function($url) use($app) {
   $content = file_get_contents($url);
-  return $content;
+  return $app['twig']->render('url.twig', array('content' => $content));
 });
 
 $app->get('/db/', function() use($app) {
