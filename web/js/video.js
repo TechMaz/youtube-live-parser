@@ -25,6 +25,6 @@ function updateChats(){
 			$('#yt-chat-container').scrollTop($('#yt-chat-container')[0].scrollHeight);
 			$('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
 		}, 200);
-		setTimeout(updateChats,10000);
+		setTimeout(updateChats,5000);
 	});
 }
