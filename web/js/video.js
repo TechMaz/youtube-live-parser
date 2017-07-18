@@ -16,6 +16,7 @@ setTimeout(function(){
   		//chatbox.chat_item = responseData;
   		//console.log(responseData);
   		$('#chatbox').html(responseData);
+  		$('#chatbox').scrollTop = $('#chatbox').scrollHeight;
 	});
 
 }, 2000);
