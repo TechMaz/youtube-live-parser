@@ -44,9 +44,10 @@ $app->get('/video/{vid}', function($vid) use($app) {
   return $app['twig']->render('video.twig', array('vid' => $vid, 'chats' => $chats_array));
 });
 
-$app->get('/url/{url}', function(Request $request) use($app) {
+$app->get('/url/', function(Request $request) use($app) {
   $params = $request->query->all();
   $url_param = $params[$url];
+  //$url_param = $request->attributes->get('url');
   $content = file_get_contents("http://$url_param");
   return $app['twig']->render('url.twig', array('content' => $content));
 });
