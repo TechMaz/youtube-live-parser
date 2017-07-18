@@ -8,7 +8,7 @@ body{
  position: absolute;
  left: 0px;
  top: 0px;
- width: 65%;
+ width: 60%;
  height: 100%;
  padding: 30px;
  padding-top: 15%;
@@ -21,9 +21,10 @@ body{
  left: 65%;
  right: 0px;
  top: 0px;
- width: 35%;
+ width: 40%;
  height: 100%;
- padding: 30px;
+ padding: 20px;
+ padding-right: 60px;
  padding-top: 7.5%;
 }
 .yt-chat-container > .yt-chatbox{
