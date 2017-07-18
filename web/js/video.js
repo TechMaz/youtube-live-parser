@@ -1,7 +1,7 @@
 
 setTimeout(function(){ 
 
-	Vue.component('chat-item', {
+	/*Vue.component('chat-item', {
 	  template: '<ul><li>test</li><li>test</li></ul>'
 	})
 
@@ -10,12 +10,13 @@ setTimeout(function(){
 	  data: {
 	    chat_item: ''
 	  }
-	})
+	})*/
 
-	/*$.get('https://youtube-live-chat.herokuapp.com/scrape/MFH0i0KcE_o').then(function(responseData) {
-  		chatbox.chat_item = responseData;
+	$.get('https://youtube-live-chat.herokuapp.com/chats/MFH0i0KcE_o').then(function(responseData) {
+  		//chatbox.chat_item = responseData;
   		//console.log(responseData);
-	});*/
+  		$('#chatbox').html(responseData);
+	});
 
 }, 2000);
 
