@@ -2,21 +2,20 @@
 setTimeout(function(){ 
 
 	Vue.component('chat-item', {
-	  props: ['chat'],
-	  template: '<tr><td><strong>{{ chat.author_name }}</strong>: {{ chat.message}}</td></tr>'
+	  template: '<ul><li>test</li><li>test</li></ul>'
 	})
 
-	var chatbox = new Vue({
+	/*var chatbox = new Vue({
 	  el: '#chatbox',
 	  data: {
-	    chats_arr: []
+	    chat_item: ''
 	  }
-	})
+	})*/
 
-	$.get('https://youtube-live-chat.herokuapp.com/scrape/MFH0i0KcE_o').then(function(responseData) {
-  		chatbox.chats_arr = JSON.parse(responseData);
-  		console.log(JSON.parse(responseData));
-	});
+	/*$.get('https://youtube-live-chat.herokuapp.com/scrape/MFH0i0KcE_o').then(function(responseData) {
+  		chatbox.chat_item = responseData;
+  		//console.log(responseData);
+	});*/
 
 }, 2000);
 
