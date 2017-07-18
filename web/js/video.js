@@ -13,7 +13,7 @@ setTimeout(function(){
 	  }
 	})
 
-	$.get('/scrape/MFH0i0KcE_o').then(function(responseData) {
+	$.get('https://youtube-live-chat.herokuapp.com/scrape/MFH0i0KcE_o').then(function(responseData) {
   		chatbox.chats_arr = responseData;
 	});
 
